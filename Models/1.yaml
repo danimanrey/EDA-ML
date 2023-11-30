@@ -1,0 +1,19 @@
+# Configuración del Modelo
+modelo:
+  tipo: regresion_lineal
+  hiperparametros:
+    alpha: 0.01
+    iteraciones: 1000
+
+# Datos de Entrada
+datos_entrada:
+  caracteristicas:
+    - df["Market cap"]
+    - df["Market cap ETH"]
+    - df["Market cap Others"]
+  variable_objetivo: df["Market cap BTC"]
+
+# Otras Configuraciones
+otras_configuraciones:
+  guardar_modelo: true
+  ruta_modelo: ./models/trained_models/modeloRL.pkl
